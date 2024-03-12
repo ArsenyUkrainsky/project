@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/static/fonts/Poppins-Regular.woff2') format('woff2'),
+    url('/static/fonts/Poppins-Regular.woff') format('woff'),
+    url('/static/fonts/Poppins-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/static/fonts/Poppins-Italic.woff2') format('woff2'),
+    url('/static/fonts/Poppins-Italic.woff') format('woff'),
+    url('/static/fonts/Poppins-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/static/fonts/Poppins-Medium.woff2') format('woff2'),
+    url('/static/fonts/Poppins-Medium.woff') format('woff'),
+    url('/static/fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/static/fonts/Poppins-SemiBold.woff2') format('woff2'),
+    url('/static/fonts/Poppins-SemiBold.woff') format('woff'),
+    url('/static/fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/static/fonts/Inter-Regular.woff2') format('woff2'),
+    url('/static/fonts/Inter-Regular.woff') format('woff'),
+    url('/static/fonts/Inter-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/static/fonts/Inter-Medium.woff2') format('woff2'),
+    url('/static/fonts/Inter-Medium.woff') format('woff'),
+    url('/static/fonts/Inter-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/static/fonts/Manrope-Regular.woff2') format('woff2'),
+    url('/static/fonts/Manrope-Regular.woff') format('woff'),
+    url('/static/fonts/Manrope-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'PublicSans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/static/fonts/PublicSans-Bold.woff2') format('woff2'),
+    url('/static/fonts/PublicSans-Bold.woff') format('woff'),
+    url('/static/fonts/PublicSans-Bold.ttf') format('truetype');
+}
+
