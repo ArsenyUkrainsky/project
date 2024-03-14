@@ -1,0 +1,13 @@
+.app {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased; /* для Chrome, Safari, новых версий Edge */
+  -moz-osx-font-smoothing: grayscale; /* для Firefox */
+  font-smoothing: antialiased; /* нестандартное, но иногда используется */
+  -webkit-tap-highlight-color: transparent; /* убираем подсветку при клике на мобильных устройствах */
+}

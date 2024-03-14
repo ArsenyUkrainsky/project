@@ -1,0 +1,12 @@
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.background-size_contain {
+  object-fit: contain;
+}
+
+.background-size_cover {
+  object-fit: cover;
+}
