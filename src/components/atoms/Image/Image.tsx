@@ -34,7 +34,7 @@ export default function Image({
         loading={lazy ? 'lazy' : 'eager'}
         role='presentation'
         src={src}
-        style={{ width: `${width}px`, height: `${height}px` }}
+        style={{ width: `${width ? `${width}px` : 'auto'}`, height: `${height ? `${height}px` : 'auto'}` }}
       />
     </picture>
   )

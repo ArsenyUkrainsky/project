@@ -1,10 +1,13 @@
-import HeroSection from "@/components/organisms/HeroSection/HeroSection";
+import DownloadSection from '@/components/organisms/DownloadSection'
+import FeaturesSection from '@/components/organisms/FeaturesSection'
+import HeroSection from '@/components/organisms/HeroSection/HeroSection'
 
 export default function Home() {
   return (
-    <main>
+    <>
       <HeroSection />
-    </main>
+      <FeaturesSection />
+      <DownloadSection />
+    </>
   )
 }
-

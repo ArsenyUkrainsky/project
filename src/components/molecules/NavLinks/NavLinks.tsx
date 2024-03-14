@@ -6,7 +6,9 @@ export default function NavLinks({ links }: INavLinks) {
   return (
     <nav className={styles.navLinks}>
       {links.map((link) => (
-        <Link href={link.href}>{link.title}</Link>
+        <Link key={link.title} href={link.href}>
+          {link.title}
+        </Link>
       ))}
     </nav>
   )

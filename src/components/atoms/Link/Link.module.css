@@ -1,5 +1,5 @@
 .link {
-  color: #606060;
+  color: var(--dark-gray-color);
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   text-decoration: none;

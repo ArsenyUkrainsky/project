@@ -6,7 +6,7 @@
 }
 
 .logo__title {
-  color: #6c5fbc;
+  color: var(--main-color);
   font-family: 'Poppins', sans-serif;
   font-size: 22px;
   font-weight: 600;

@@ -4,8 +4,9 @@ import styles from './Text.module.css'
 interface TextProps {
   children: string | ReactNode
   className?: string
+  color?: 'black' | 'red' | 'aGray' | 'sGray' | 'dGray' | 'lavender' | 'white' | 'gray'
   family?: 'poppins' | 'inter' | 'manrope' | 'publicSans'
-  size?: 'tiny' | 'small' | 'xSmall' | 'medium' | 'xMedium' | 'large'
+  size?: 'tiny' | 'small' | 'xSmall' | 'medium' | 'xMedium' | 'large' | 'big'
   style?: 'italic' | 'normal'
   weight?: 'regular' | 'medium' | 'bold' | 'semiBold'
 }
@@ -13,6 +14,7 @@ interface TextProps {
 export default function Text({
   children,
   className,
+  color = 'black',
   family = 'inter',
   size = 'medium',
   style = 'normal',
@@ -25,7 +27,8 @@ export default function Text({
       ${styles[`text_weight_${weight}`]} 
       ${styles[`text_size_${size}`]} 
       ${styles[`text_family_${family}`]} 
-      ${styles[`text_style_${style}`]} 
+      ${styles[`text_style_${style}`]}
+      ${styles[`text_color_${color}`]}
       ${className}`}>
       {children}
     </p>

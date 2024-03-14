@@ -1,5 +1,5 @@
 .text {
-  color: #676767;
+  color: var(--gray-color);
 }
 
 .text_weight_regular {
@@ -65,3 +65,40 @@
 .text_size_large {
   font-size: 20px;
 }
+
+.text_size_big {
+  font-size: 42px;
+}
+
+.text_color_white {
+  color: var(--white-color);
+}
+
+.text_color_dGray {
+  color: var(--dark-gray-color);
+}
+
+.text_color_lavender {
+  color: var(--lavander-color);
+}
+
+.text_color_sGray {
+  color: var(--light-gray-color);
+}
+
+.text_color_black {
+  color: var(--black-color);
+}
+
+.text_color_red {
+  color: var(--red-color);
+}
+
+.text_color_aGray {
+  color: var(--accent-gray-color);
+}
+
+.text_color_gray {
+  color: var(--gray-color);
+}
+

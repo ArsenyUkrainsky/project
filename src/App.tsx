@@ -7,7 +7,9 @@ function App() {
   return (
     <div className={styles.app}>
       <Header />
-      <Home />
+      <main className={styles.wrapper}>
+        <Home />
+      </main>
       <Footer />
     </div>
   )

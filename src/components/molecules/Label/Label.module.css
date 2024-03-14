@@ -1,7 +1,7 @@
 .label {
-  background-color: #F7EDD0;
+  background-color: var(--light-yellow-color);
   border-radius: 5.5px;
-  color: #DAA31A;
+  color: var(--yellow-color);
   padding: 3px 6px;
   text-align: center;
   width: fit-content;
