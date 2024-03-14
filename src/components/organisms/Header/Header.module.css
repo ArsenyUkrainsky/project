@@ -1,6 +1,6 @@
 .header {
   align-items: center;
-  border-bottom: 1px solid #cbcbcb;
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   gap: 100px;
   max-width: 1246px;

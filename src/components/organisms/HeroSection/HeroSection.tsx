@@ -4,8 +4,10 @@ import Image from '@/components/atoms/Image'
 import Button from '@/components/molecules/Button'
 import DashboardCard from '@/components/molecules/DashboardCard'
 import styles from './HeroSection.module.css'
+import { dashboardCards } from '@/mock/data'
 
 export default function HeroSection() {
+  const mockCard = dashboardCards[0]
   return (
     <section className={styles.section}>
       <div className={styles.section__content}>
@@ -66,7 +68,7 @@ export default function HeroSection() {
           className={styles.section__images_arrowUp}
         />
         <div className={styles.section__images_dashboardCard}>
-          <DashboardCard />
+          <DashboardCard {...mockCard} />
         </div>
       </div>
     </section>

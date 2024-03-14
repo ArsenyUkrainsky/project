@@ -13,7 +13,7 @@ interface IImageProps {
 
 export default function Image({
   alt,
-  backgroundSize,
+  backgroundSize = 'cover',
   className,
   height,
   hiddenArea = false,
@@ -21,8 +21,12 @@ export default function Image({
   src,
   width,
 }: IImageProps) {
+  const sizeStyle = {
+    width: `${width ? `${width}px` : 'auto'}`,
+    height: `${height ? `${height}px` : 'auto'}`,
+  }
   return (
-    <picture>
+    <picture className={styles.picture}>
       <source srcSet={src} type='image/avif' />
       <source srcSet={src} type='image/webp' />
       <source srcSet={src} type='image/png' />
@@ -34,7 +38,7 @@ export default function Image({
         loading={lazy ? 'lazy' : 'eager'}
         role='presentation'
         src={src}
-        style={{ width: `${width ? `${width}px` : 'auto'}`, height: `${height ? `${height}px` : 'auto'}` }}
+        style={sizeStyle}
       />
     </picture>
   )

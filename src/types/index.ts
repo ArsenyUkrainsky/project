@@ -17,3 +17,12 @@ export interface LunchCardProps {
   rating: number
   label: string
 }
+
+export interface DashboardCardProps {
+  id: number
+  title: string
+  time: string
+  image: string
+  status: string
+  state: string
+}

@@ -1,0 +1,26 @@
+.section {
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 116px;
+  max-width: 1246px;
+  padding-bottom: 135px;
+}
+
+.title {
+  color: var(--main-color);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 560px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: 47px;
+}
