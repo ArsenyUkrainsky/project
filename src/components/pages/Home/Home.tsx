@@ -1,6 +1,7 @@
 import DownloadSection from '@/components/organisms/DownloadSection'
 import FeaturesSection from '@/components/organisms/FeaturesSection'
 import HeroSection from '@/components/organisms/HeroSection/HeroSection'
+import LunchSection from '@/components/organisms/LunchSection'
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <FeaturesSection />
       <DownloadSection />
+      <LunchSection />
     </>
   )
 }

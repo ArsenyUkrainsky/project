@@ -1,0 +1,19 @@
+.section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 0 auto;
+  max-width: 1250px;
+  width: 100%;
+}
+
+.title {
+  color: var(--main-color);
+}
+
+.cards {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+}

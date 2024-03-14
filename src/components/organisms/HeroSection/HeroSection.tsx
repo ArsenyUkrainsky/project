@@ -24,7 +24,7 @@ export default function HeroSection() {
         </Text>
         <div className={styles.section__buttons}>
           <Button onClick={() => {}}>Get Started</Button>
-          <Button onClick={() => {}} transparent>
+          <Button onClick={() => {}} color='transparent'>
             Go Pro
           </Button>
         </div>

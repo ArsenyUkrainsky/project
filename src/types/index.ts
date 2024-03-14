@@ -1,4 +1,4 @@
-export type icons = 'logo' | 'arrow-r' | 'facebook' | 'in' | 'inst' | 'star' | 'twit'
+export type icons = 'logo' | 'arrow-r' | 'facebook' | 'in' | 'inst' | 'star' | 'twit' | 'book-mark'
 
 type NavLink = {
   title: string
@@ -7,4 +7,13 @@ type NavLink = {
 
 export interface INavLinks {
   links: NavLink[]
+}
+
+export interface LunchCardProps {
+  id?: number
+  title: string
+  time: string
+  image: string
+  rating: number
+  label: string
 }

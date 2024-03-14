@@ -26,6 +26,7 @@
 .item {
   color: var(--gray-color);
   list-style-type: disc;
+  margin-left: 20px;
 }
 
 .button {
