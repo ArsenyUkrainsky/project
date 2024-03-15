@@ -5,7 +5,7 @@ import Title from '@/components/atoms/Title'
 import Text from '@/components/atoms/Text'
 import Icon from '@/components/atoms/Icon'
 import styles from './LunchCard.module.css'
-import Button from '../Button'
+import Button from '../../atoms/Button'
 
 export default function LunchCard({ title, time, image, rating, label }: LunchCardProps) {
   return (

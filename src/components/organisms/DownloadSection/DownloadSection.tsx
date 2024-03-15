@@ -1,7 +1,7 @@
 import Image from '@/components/atoms/Image'
 import Title from '@/components/atoms/Title'
 import Text from '@/components/atoms/Text'
-import Button from '@/components/molecules/Button'
+import Button from '@/components/atoms/Button'
 import { downloadText } from '@/content'
 import styles from './DownloadSection.module.css'
 

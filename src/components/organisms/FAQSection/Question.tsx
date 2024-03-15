@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Text from '@/components/atoms/Text'
 import Title from '@/components/atoms/Title'
-import Button from '@/components/molecules/Button'
+import Button from '@/components/atoms/Button'
 import styles from './FAQSection.module.css'
 
 interface IQuestion {

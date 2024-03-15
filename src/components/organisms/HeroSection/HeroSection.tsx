@@ -1,7 +1,7 @@
 import Title from '@/components/atoms/Title'
 import Text from '@/components/atoms/Text'
 import Image from '@/components/atoms/Image'
-import Button from '@/components/molecules/Button'
+import Button from '@/components/atoms/Button'
 import DashboardCard from '@/components/molecules/DashboardCard'
 import styles from './HeroSection.module.css'
 import { dashboardCards } from '@/mock/data'
