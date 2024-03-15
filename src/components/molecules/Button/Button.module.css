@@ -39,6 +39,12 @@
   border-radius: 50%;
 }
 
+.size_sTiny {
+  height: 30px;
+  padding: 0;
+  width: 30px;
+}
+
 .size_tiny {
   height: 40px;
   padding: 0;

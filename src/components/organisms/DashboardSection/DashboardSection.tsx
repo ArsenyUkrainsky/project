@@ -13,9 +13,7 @@ export default function DashboardSection() {
         </Title>
         <ul className={styles.cards}>
           {dashboardCards.map((card) => (
-            <li key={card.id}>
-              <DashboardCard {...card} />
-            </li>
+            <DashboardCard key={card.id} {...card} />
           ))}
         </ul>
       </div>

@@ -11,7 +11,7 @@ interface IButton {
   iconSizeH?: number
   onClick: () => void
   shape?: 'rounded' | 'circle'
-  size?: 'tiny' | 'small' | 'medium' | 'large'
+  size?: 'sTiny' | 'tiny' | 'small' | 'medium' | 'large'
   transparent?: boolean
   type?: 'button' | 'submit' | 'reset'
 }

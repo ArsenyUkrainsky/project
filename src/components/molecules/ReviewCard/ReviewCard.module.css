@@ -1,0 +1,16 @@
+.card {
+  background-color: var(--white-color);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 114px;
+  padding: 40px 42px 47px;
+  width: 528px;
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+

@@ -6,7 +6,7 @@ import styles from './DashboardCard.module.css'
 export default function DashboardCard({ title, time, image, status, state }: DashboardCardProps) {
   const isActive = state === 'active'
   return (
-    <div className={styles.card}>
+    <li className={styles.card}>
       <div className={styles.content}>
         <Image src={image} alt={title} width={75} height={75} lazy />
         <div className={styles.text}>
@@ -21,6 +21,6 @@ export default function DashboardCard({ title, time, image, status, state }: Das
       <Text size='tiny' color='aGray'>
         {time}
       </Text>
-    </div>
+    </li>
   )
 }

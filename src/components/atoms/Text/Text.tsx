@@ -4,7 +4,7 @@ import styles from './Text.module.css'
 interface TextProps {
   children: string | ReactNode
   className?: string
-  color?: 'black' | 'red' | 'aGray' | 'sGray' | 'dGray' | 'lavender' | 'white' | 'gray'
+  color?: 'black' | 'red' | 'aGray' | 'sGray' | 'dGray' | 'lavender' | 'white' | 'gray' | 'textGray'
   family?: 'poppins' | 'inter' | 'manrope' | 'publicSans'
   size?: 'tiny' | 'small' | 'xSmall' | 'medium' | 'xMedium' | 'large' | 'big'
   style?: 'italic' | 'normal'
