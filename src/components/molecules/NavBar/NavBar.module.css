@@ -1,0 +1,16 @@
+.nav {
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  max-width: 1246px;
+  padding-bottom: 35px;
+  width: 100%;
+}
+
+.header {
+  gap: 100px;
+}
+
+.footer {
+  justify-content: space-between;
+}

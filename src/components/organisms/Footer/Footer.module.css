@@ -1,0 +1,25 @@
+.footer {
+  align-items: center;
+  background-color: var(--footer-gray-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 345px;
+  width: 100%;
+}
+
+.footerNav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 56px;
+    max-width: 1246px;
+    width: 100%;
+}
+
+.socialLinks {
+  align-items: center;
+  display: flex;
+  gap: 55px;
+}
+

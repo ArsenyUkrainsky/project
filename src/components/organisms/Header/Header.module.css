@@ -1,9 +1,7 @@
 .header {
   align-items: center;
-  border-bottom: 1px solid var(--border-color);
+  justify-content: center;
   display: flex;
-  gap: 100px;
-  max-width: 1246px;
-  padding: 60px 0 35px;
+  margin: 60px auto 0;
   width: 100%;
 }

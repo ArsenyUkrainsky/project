@@ -1,11 +1,13 @@
 export type icons = 'logo' | 'arrow-r' | 'facebook' | 'in' | 'inst' | 'star' | 'twit' | 'book-mark' | 'review-icon'
+export type colors = 'black' | 'red' | 'aGray' | 'sGray' | 'dGray' | 'lavender' | 'white' | 'gray' | 'textGray' | 'footerDarkGray'
 
-type NavLink = {
+export type NavLink = {
   title: string
   href: string
 }
 
 export interface INavLinks {
+  color: 'dGray' | 'footerDarkGray'
   links: NavLink[]
 }
 
@@ -25,4 +27,10 @@ export interface DashboardCardProps {
   image: string
   status: string
   state: string
+}
+
+export interface SocialLinkProps {
+  href: string
+  title: string
+  icon: icons
 }

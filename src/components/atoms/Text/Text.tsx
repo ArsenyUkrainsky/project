@@ -1,10 +1,11 @@
 import { type ReactNode } from 'react'
+import type { colors } from '@/types'
 import styles from './Text.module.css'
 
 interface TextProps {
   children: string | ReactNode
   className?: string
-  color?: 'black' | 'red' | 'aGray' | 'sGray' | 'dGray' | 'lavender' | 'white' | 'gray' | 'textGray'
+  color?: colors
   family?: 'poppins' | 'inter' | 'manrope' | 'publicSans'
   size?: 'tiny' | 'small' | 'xSmall' | 'medium' | 'xMedium' | 'large' | 'big'
   style?: 'italic' | 'normal'
