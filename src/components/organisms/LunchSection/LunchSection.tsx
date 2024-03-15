@@ -11,9 +11,7 @@ export default function LunchSection() {
       </Title>
       <ul className={styles.cards}>
         {topLunchCards.map((card) => (
-          <li key={card.id}>
-            <LunchCard {...card} />
-          </li>
+          <LunchCard key={card.id} {...card} />
         ))}
       </ul>
     </section>

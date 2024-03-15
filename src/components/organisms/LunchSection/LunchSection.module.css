@@ -19,3 +19,28 @@
   gap: 25px;
   grid-template-columns: repeat(3, 1fr);
 }
+
+@media (max-width: 1199px) {
+  .section {
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 90%;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .section {
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+  }
+}

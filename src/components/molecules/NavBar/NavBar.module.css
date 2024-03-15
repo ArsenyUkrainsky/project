@@ -12,5 +12,28 @@
 }
 
 .footer {
+  gap: 40px;
   justify-content: space-between;
 }
+
+@media (max-width: 1199px) {
+  .nav {
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav {
+    gap: 15px;
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 575px) {
+  .nav {
+    padding-bottom: 10px;
+  }
+}
+

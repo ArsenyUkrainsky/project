@@ -84,3 +84,20 @@
 .icon_opened::after {
   transform: rotate(0deg);
 }
+
+@media (max-width: 1199px) {
+  .section {
+    margin-bottom: 80px;
+  }
+
+  .list {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .question__header {
+    gap: 10px;
+    flex-direction: column;
+  }
+}

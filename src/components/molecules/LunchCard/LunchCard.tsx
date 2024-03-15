@@ -9,7 +9,7 @@ import Button from '../../atoms/Button'
 
 export default function LunchCard({ title, time, image, rating, label }: LunchCardProps) {
   return (
-    <div className={styles.card}>
+    <li className={styles.card}>
       <Image src={image} alt={title} width={400} height={176} />
       <div className={styles.content}>
         <Label>{label}</Label>
@@ -33,6 +33,6 @@ export default function LunchCard({ title, time, image, rating, label }: LunchCa
           <Text>{rating}</Text>
         </div>
       </div>
-    </div>
+    </li>
   )
 }

@@ -40,15 +40,15 @@
 }
 
 .size_sTiny {
-  height: 30px;
+  min-height: 30px;
   padding: 0;
-  width: 30px;
+  min-width: 30px;
 }
 
 .size_tiny {
-  height: 40px;
+  min-height: 40px;
   padding: 0;
-  width: 40px;
+  min-width: 40px;
 }
 
 .size_small {

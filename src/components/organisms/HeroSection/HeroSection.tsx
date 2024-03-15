@@ -1,12 +1,32 @@
+import { useEffect, useState } from 'react'
 import Title from '@/components/atoms/Title'
 import Text from '@/components/atoms/Text'
 import Image from '@/components/atoms/Image'
 import Button from '@/components/atoms/Button'
 import DashboardCard from '@/components/molecules/DashboardCard'
-import styles from './HeroSection.module.css'
+import { useDeviceType } from '@/hooks'
 import { dashboardCards } from '@/mock/data'
+import styles from './HeroSection.module.css'
 
 export default function HeroSection() {
+  const { isMobile } = useDeviceType()
+  const [mainImageWidth, setMainImageWidth] = useState(448)
+  const [mainImageHeight, setMainImageHeight] = useState(455)
+  const [graphImageWidth, setGraphImageWidth] = useState(278)
+  const [graphImageHeight, setGraphImageHeight] = useState(212)
+  useEffect(() => {
+    if (isMobile) {
+      setMainImageWidth(320)
+      setMainImageHeight(320)
+      setGraphImageWidth(200)
+      setGraphImageHeight(150)
+    } else {
+      setMainImageWidth(448)
+      setMainImageHeight(455)
+      setGraphImageWidth(278)
+      setGraphImageHeight(212)
+    }
+  }, [isMobile])
   const mockCard = dashboardCards[0]
   return (
     <section className={styles.section}>
@@ -17,7 +37,7 @@ export default function HeroSection() {
             OVER 1000 USERS
           </Text>
         </div>
-        <Title>
+        <Title level={isMobile ? 3 : 1}>
           Enjoy Foods All Over The <span className={styles.section__title_color}>World</span>
         </Title>
         <Text size='xMedium' className={styles.section__description}>
@@ -25,19 +45,21 @@ export default function HeroSection() {
           to two days early. Get a <span className={styles.section__description_color}>$20 bonus</span>.
         </Text>
         <div className={styles.section__buttons}>
-          <Button onClick={() => {}}>Get Started</Button>
-          <Button onClick={() => {}} color='transparent'>
+          <Button onClick={() => {}} size={isMobile ? 'small' : 'medium'}>
+            Get Started
+          </Button>
+          <Button onClick={() => {}} color='transparent' size={isMobile ? 'small' : 'medium'}>
             Go Pro
           </Button>
         </div>
       </div>
       <div className={styles.section__images}>
-        <Image src='/static/images/Food.png' alt='Food' width={448} height={455} />
+        <Image src='/static/images/Food.png' alt='Food' width={mainImageWidth} height={mainImageHeight} />
         <Image
           src='/static/images/Graph.png'
           alt='Graph'
-          width={278}
-          height={212}
+          width={graphImageWidth}
+          height={graphImageHeight}
           className={styles.section__images_graph}
         />
         <Image

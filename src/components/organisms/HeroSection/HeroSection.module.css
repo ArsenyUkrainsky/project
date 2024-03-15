@@ -98,3 +98,29 @@
   z-index: 1;
   width: 330px;
 }
+
+@media (max-width: 1199px) {
+  .section {
+    flex-direction: column;
+    margin-top: 32px;
+  }
+
+  .section__content {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 575px) {
+  .section {
+    margin-top: 20px;
+  }
+
+  .section__images_arrowUp {
+    bottom: 20%;
+    left: 65%;
+  }
+
+  .section__images_dashboardCard {
+    width: 280px;
+  }
+}

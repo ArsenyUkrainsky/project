@@ -5,3 +5,22 @@
   margin: 60px auto 0;
   width: 100%;
 }
+
+@media (max-width: 1199px) {
+  .header {
+    margin: 40px auto 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    margin: 20px auto 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .header {
+    margin: 10px auto 0;
+    flex-direction: column;
+  }
+}

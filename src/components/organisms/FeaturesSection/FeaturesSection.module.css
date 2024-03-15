@@ -19,8 +19,20 @@
   max-width: 280px;
   padding: 0 60px;
   text-align: center;
+  min-height: 120px;
 }
 
 .section__feature:last-of-type {
   border-right: none;
 }
+
+@media (max-width: 575px) {
+  .section {
+    background-size: contain;
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 41px;
+    padding: 15px 0;
+  }
+}
+

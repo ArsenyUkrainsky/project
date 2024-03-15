@@ -9,12 +9,12 @@
 }
 
 .footerNav {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 56px;
-    max-width: 1246px;
-    width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 56px;
+  max-width: 1246px;
+  width: 100%;
 }
 
 .socialLinks {
@@ -23,3 +23,14 @@
   gap: 55px;
 }
 
+@media (max-width: 1199px) {
+  .footer {
+    min-height: 260px;
+  }
+
+  .footerNav {
+    flex-direction: column-reverse;
+    gap: 25px;
+    margin-top: 25px;
+  }
+}

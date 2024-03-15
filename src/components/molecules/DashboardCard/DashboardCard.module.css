@@ -25,3 +25,11 @@
   flex-direction: column;
   gap: 8px;
 }
+
+@media (max-width: 1199px) {
+  .card {
+    height: 100px;
+    max-width: 280px;
+  }
+}
+
