@@ -16,14 +16,14 @@ export default function Question({ title, content }: IQuestion) {
       <div className={styles.question__header}>
         <Title level={5}>{title}</Title>
         <Button onClick={() => setIsOpen(!isOpen)} size='sTiny' shape='circle'>
-          {isOpen ? '-' : '+'}
+          <span style={{position: 'relative'}}><span className={`${styles.icon} ${isOpen ? styles.icon_opened : ''}`}></span></span>
         </Button>
       </div>
-      {isOpen && (
-        <Text family='poppins' size='large' color='textGray'>
-          {content}
-        </Text>
-      )}
+        <span className={`${styles.content} ${isOpen ? styles.content_opened : ''}`}>
+          <Text family='poppins' size='large' color='textGray'>
+            {content}
+          </Text>
+        </span>
     </li>
   )
 }

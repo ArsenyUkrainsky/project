@@ -40,3 +40,47 @@
   justify-content: space-between;
   width: 100%;
 }
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease;
+}
+
+.content_opened {
+  max-height: 1000px;
+}
+
+.icon {
+  display: block;
+  width: 12px;
+  height: 1.5px;
+  background-color: var(--white-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.icon::after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 1.5px;
+  background-color: var(--white-color);
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.icon::after {
+  transform: rotate(90deg);
+}
+
+.icon_opened {
+  background-color: transparent;
+}
+
+.icon_opened::after {
+  transform: rotate(0deg);
+}
