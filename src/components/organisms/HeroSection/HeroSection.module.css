@@ -110,7 +110,7 @@
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 640px) {
   .section {
     margin-top: 20px;
   }

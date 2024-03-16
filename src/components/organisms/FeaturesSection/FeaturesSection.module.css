@@ -26,7 +26,7 @@
   border-right: none;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 640px) {
   .section {
     background-size: contain;
     flex-direction: column;

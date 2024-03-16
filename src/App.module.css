@@ -18,3 +18,9 @@
   overflow: hidden;
   width: 100%;
 }
+
+@media (max-width: 640px) {
+  .wrapper {
+    max-width: 320px;
+  }
+}
