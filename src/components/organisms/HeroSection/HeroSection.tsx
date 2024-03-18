@@ -4,12 +4,14 @@ import Text from '@/components/atoms/Text'
 import Image from '@/components/atoms/Image'
 import Button from '@/components/atoms/Button'
 import DashboardCard from '@/components/molecules/DashboardCard'
-import { useDeviceType } from '@/hooks'
 import { dashboardCards } from '@/mock/data'
 import styles from './HeroSection.module.css'
 
-export default function HeroSection() {
-  const { isMobile } = useDeviceType()
+interface HeroSectionProps {
+  isMobile: boolean
+}
+
+export default function HeroSection({ isMobile }: HeroSectionProps) {
   const [mainImageWidth, setMainImageWidth] = useState(448)
   const [mainImageHeight, setMainImageHeight] = useState(455)
   const [graphImageWidth, setGraphImageWidth] = useState(278)

@@ -4,11 +4,13 @@ import Title from '@/components/atoms/Title'
 import Text from '@/components/atoms/Text'
 import Button from '@/components/atoms/Button'
 import { downloadText } from '@/content'
-import { useDeviceType } from '@/hooks'
 import styles from './DownloadSection.module.css'
 
-export default function DownloadSection() {
-  const { isMobile } = useDeviceType()
+interface DownloadSectionProps {
+  isMobile: boolean
+}
+
+export default function DownloadSection({ isMobile }: DownloadSectionProps) {
   const [imageHeight, setImageHeight] = useState<number>(625)
   const [imageWidth, setImageWidth] = useState<number>(370)
 

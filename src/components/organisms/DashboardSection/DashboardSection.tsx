@@ -4,10 +4,13 @@ import Title from '@/components/atoms/Title'
 import DashboardCard from '@/components/molecules/DashboardCard'
 import { dashboardCards } from '@/mock/data'
 import styles from './DashboardSection.module.css'
-import { useDeviceType } from '@/hooks'
 
-export default function DashboardSection() {
-  const { isMobile, isTablet } = useDeviceType()
+interface DashboardSectionProps {
+  isTablet: boolean
+  isMobile: boolean
+}
+
+export default function DashboardSection({ isTablet, isMobile }: DashboardSectionProps) {
   const [imageWidth, setImageWidth] = useState(534)
   const [imageHeight, setImageHeight] = useState(560)
 
