@@ -1,7 +1,7 @@
 export const navLinks = [
-  { title: 'Recipes', href: '/' },
-  { title: 'FAQ', href: '#' },
-  { title: 'Blog', href: '#' },
+  { title: 'Recipes', href: '/#recipes' },
+  { title: 'FAQ', href: '/#faq' },
+  { title: 'Blog', href: '/blog' },
 ]
 
 export const featuresText = [

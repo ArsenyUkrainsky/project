@@ -1,15 +1,18 @@
+import { Link } from 'react-router-dom'
 import styles from './Link.module.css'
 
 interface ILink {
   href: string
   children: React.ReactNode
   className?: string
+  target?: '_blank' | '_self'
+  rel?: string
 }
-// TODO: router
-export default function Link({ className, href, children }: ILink) {
+
+export default function CustomLink({ className, href, children, target, rel }: ILink) {
   return (
-    <a className={`${styles.link} ${className ?? ''}`} href={href} target='_blank' rel='noopener noreferrer'>
+    <Link className={`${styles.link} ${className ?? ''}`} to={href} target={target} rel={rel}>
       {children}
-    </a>
+    </Link>
   )
 }

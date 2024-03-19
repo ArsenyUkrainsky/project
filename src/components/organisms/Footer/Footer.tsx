@@ -1,6 +1,6 @@
 import type { SocialLinkProps, icons } from '@/types'
 import Text from '@/components/atoms/Text'
-import { Link } from '@/components/atoms/Link'
+import Link from '@/components/atoms/Link'
 import Icon from '@/components/atoms/Icon'
 import NavBar from '@/components/molecules/NavBar/NavBar'
 import { navLinks, socialLinks } from '@/content'
