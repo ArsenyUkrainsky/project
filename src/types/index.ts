@@ -12,12 +12,32 @@ export interface INavLinks {
 }
 
 export interface LunchCardProps {
-  id?: number
-  title: string
-  time: string
-  image: string
-  rating: number
-  label: string
+id: number
+name: string
+ingredients: string[]
+instructions: string[]
+prepTimeMinutes: number
+cookTimeMinutes: number
+servings: number
+difficulty: 'Easy' | 'Medium' | 'Hard'
+cuisine: string
+caloriesPerServing: number
+tags: string[]
+userId: number
+image: string
+rating: number
+reviewCount: number
+mealType: string[]
+}
+
+export interface ReviewCardProps {
+  id: number
+  body: string
+  postId: number
+  user: {
+    id: number
+    username: string
+  }
 }
 
 export interface DashboardCardProps {
@@ -33,4 +53,13 @@ export interface SocialLinkProps {
   href: string
   title: string
   icon: icons
+}
+
+export interface PostProps {
+  id: number
+  title: string
+  body: string
+  userId: number
+  tags: string[]
+  reactions: number
 }

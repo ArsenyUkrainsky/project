@@ -1,30 +1,3 @@
-export const topLunchCards = [
-  {
-    id: 1,
-    title: 'The Chicken King',
-    time: '24 min',
-    image: '/src/mock/images/The Chicken King.png',
-    rating: 4.8,
-    label: 'Pizza',
-  },
-  {
-    id: 2,
-    title: 'The Chicken King',
-    time: '24 min',
-    image: '/src/mock/images/The Chicken King.png',
-    rating: 4.8,
-    label: 'Pizza',
-  },
-  {
-    id: 3,
-    title: 'The Chicken King',
-    time: '24 min',
-    image: '/src/mock/images/The Chicken King.png',
-    rating: 4.8,
-    label: 'Pizza',
-  },
-]
-
 export const dashboardCards = [
   {
     id: 1,
@@ -49,27 +22,6 @@ export const dashboardCards = [
     image: '/src/mock/images/Food Image3.png',
     status: 'Cancelled',
     state: 'inactive',
-  },
-]
-
-export const reviews = [
-  {
-    id: 1,
-    name: 'John Doe',
-    review: 'I cannot believe how I found you, this is so pretty.',
-    anonymous: false,
-  },
-  {
-    id: 2,
-    name: 'John Doe',
-    review: 'I cannot believe how I found you, this is so pretty.',
-    anonymous: true,
-  },
-  {
-    id: 3,
-    name: 'John Doe',
-    review: 'I cannot believe how I found you, this is so pretty.',
-    anonymous: true,
   },
 ]
 
