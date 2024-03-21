@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.picture_rounded {
+  border-radius: 50%;
+}
+
 .image {
   object-fit: cover;
   object-position: center;

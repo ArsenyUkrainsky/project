@@ -11,6 +11,7 @@ interface IButton {
   iconRotate?: number
   iconSizeW?: number
   iconSizeH?: number
+  iconPosition?: 'left' | 'right'
   onClick: () => void
   shape?: 'rounded' | 'circle'
   size?: 'sTiny' | 'tiny' | 'small' | 'medium' | 'large'
@@ -27,6 +28,7 @@ export default function Button({
   iconRotate,
   iconSizeW,
   iconSizeH,
+  iconPosition = 'right',
   onClick,
   shape = 'rounded',
   size = 'medium',
@@ -41,8 +43,8 @@ export default function Button({
       ${styles[`color_${color}`]}
       ${styles[`shape_${shape}`]}
       ${styles[`size_${size}`]}`}>
-      {children}
-      {icon && <Icon name={icon} width={iconSizeW} height={iconSizeH} rotate={iconRotate} color={iconColor} />}
+      {iconPosition === 'left' ? icon && <Icon name={icon} width={iconSizeW} height={iconSizeH} rotate={iconRotate} color={iconColor} /> : children}
+      {iconPosition === 'right' ? icon && <Icon name={icon} width={iconSizeW} height={iconSizeH} rotate={iconRotate} color={iconColor} /> : children}
     </button>
   )
 }

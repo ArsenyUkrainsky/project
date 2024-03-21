@@ -21,7 +21,24 @@ export const api = createApi({
         total: response?.total ?? 0,
       }),
     }),
+    getPostById: builder.query({
+      query: ({ id = '' }) => `/posts/${id}`,
+    }),
+    getUserById: builder.query({
+      query: ({ id = '' }) => `/users/${id}/?&select=firstName,lastName,image`,
+    }),
+    getCommentsByPostId: builder.query({
+      query: ({ id = '', limit = 3 }) => `/comments/post/${id}?limit=${limit}`,
+      transformResponse: (response: { comments: ReviewCardProps[] }) => response?.comments ?? [],
+    }),
   }),
 })
 
-export const { useGetRecipesQuery, useGetCommentsQuery, useGetPostsQuery } = api
+export const {
+  useGetCommentsByPostIdQuery,
+  useGetCommentsQuery,
+  useGetPostByIdQuery,
+  useGetPostsQuery,
+  useGetRecipesQuery,
+  useLazyGetUserByIdQuery,
+} = api

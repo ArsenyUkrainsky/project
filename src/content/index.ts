@@ -16,8 +16,8 @@ export const downloadText = [
 ]
 
 export const socialLinks = [
-  { title: 'Instagram', href: '#', icon: 'inst' },
-  { title: 'Linkedin', href: '#', icon: 'in' },
-  { title: 'Facebook', href: '#', icon: 'facebook' },
-  { title: 'Twitter', href: '#', icon: 'twit' },
+  { title: 'Instagram', href: '', icon: 'inst' },
+  { title: 'Linkedin', href: '', icon: 'in' },
+  { title: 'Facebook', href: '', icon: 'facebook' },
+  { title: 'Twitter', href: '', icon: 'twit' },
 ]
