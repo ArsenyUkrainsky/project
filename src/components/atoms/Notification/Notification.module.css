@@ -1,0 +1,8 @@
+.notification {
+  align-items: center;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+

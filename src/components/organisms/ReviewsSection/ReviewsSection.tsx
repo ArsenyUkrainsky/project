@@ -1,9 +1,11 @@
 import Slider from 'react-slick'
+import type { ReviewCardProps } from '@/types'
+import { useGetCommentsQuery } from '@/store/api/apiSlice'
 import Title from '@/components/atoms/Title'
+import SkeletonList from '@/components/atoms/SkeletonList'
+import Notification from '@/components/atoms/Notification'
 import ReviewCard from '@/components/molecules/ReviewCard'
 import styles from './ReviewsSection.module.css'
-import { useGetCommentsQuery } from '@/store/api/apiSlice'
-import { ReviewCardProps } from '@/types'
 
 const settings = {
   arrows: false,
@@ -31,9 +33,13 @@ const settings = {
 }
 
 export default function ReviewsSection() {
-  const { data, isLoading } = useGetCommentsQuery({ limit: 6 })
+  const { data, isLoading, error } = useGetCommentsQuery({ limit: 6 })
 
-  return (
+  if (error) return <Notification message={error} type='error' />
+
+  return isLoading ? (
+    <SkeletonList count={3} />
+  ) : (
     <section className={styles.section}>
       <div className={styles.wrapper}>
         <Title level={3}>

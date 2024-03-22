@@ -1,0 +1,40 @@
+.wrapper {
+  max-width: 1250px;
+  margin: 25px auto;
+  width: 100%;
+}
+
+.title, .card {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.title {
+  height: 45px;
+  width: 33%;
+  margin: 0 auto 30px;
+  border-radius: 6px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.card {
+  width: 30%;
+  height: 200px;
+  border-radius: 12px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
