@@ -1,0 +1,26 @@
+.app {
+  align-items: center;
+  background-color: var(--background-white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 100vh;
+  width: 100%;
+  -webkit-font-smoothing: antialiased; /* для Chrome, Safari, новых версий Edge */
+  -moz-osx-font-smoothing: grayscale; /* для Firefox */
+  font-smoothing: antialiased; /* нестандартное, но иногда используется */
+  -webkit-tap-highlight-color: transparent; /* убираем подсветку при клике на мобильных устройствах */
+}
+
+.wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    max-width: 320px;
+  }
+}

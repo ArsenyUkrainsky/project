@@ -1,0 +1,27 @@
+.section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 77px;
+  margin: 0 auto 160px;
+  max-width: 1250px;
+}
+.title {
+  color: var(--main-color);
+}
+
+.list {
+  align-items: flex-start;
+  align-self: flex-start;
+  display: flex;
+  gap: 48px;
+}
+
+@media (max-width: 1199px) {
+  .section {
+    gap: 40px;
+    margin: 0 auto 80px;
+    max-width: 90%;
+  }
+}
+

@@ -1,0 +1,15 @@
+.logo {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.logo__title {
+  color: var(--main-color);
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 29px;
+}
+

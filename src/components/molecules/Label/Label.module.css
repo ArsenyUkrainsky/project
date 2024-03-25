@@ -1,0 +1,9 @@
+.label {
+  background-color: var(--light-yellow-color);
+  border-radius: 5.5px;
+  color: var(--yellow-color);
+  padding: 3px 6px;
+  text-align: center;
+  width: fit-content;
+}
+

@@ -1,0 +1,64 @@
+.button {
+  align-items: center;
+  border: 1px solid var(--main-color);
+  color: var(--white-color);
+  cursor: pointer;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 16px;
+  justify-content: center;
+  letter-spacing: 1px;
+  line-height: 24px;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.color_main {
+  background-color: var(--main-color);
+}
+
+.color_transparent {
+  background: transparent;
+  color: var(--main-color);
+}
+
+.color_light-lavander {
+  background-color: var(--light-lavander-color);
+  border-color: var(--light-lavander-color);
+  color: var(--main-color);
+}
+
+.shape_rounded {
+  border-radius: 16px;
+}
+
+.shape_circle {
+  border: none;
+  border-radius: 50%;
+}
+
+.size_sTiny {
+  min-height: 30px;
+  padding: 0;
+  min-width: 30px;
+}
+
+.size_tiny {
+  min-height: 40px;
+  padding: 0;
+  min-width: 40px;
+}
+
+.size_small {
+  padding: 12px 24px;
+}
+
+.size_medium {
+  padding: 18px 30px;
+}
+
+.size_large {
+  padding: 24px 36px;
+}

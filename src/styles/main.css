@@ -1,0 +1,29 @@
+@import './reset.css';
+@import './fonts.css';
+
+* {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+:root {
+  --accent-gray-color: #acadb9;
+  --background-white-color: #f9f9f9;
+  --black-color: #323142;
+  --border-color: #cbcbcb;
+  --dark-gray-color: #606060;
+  --dark-main-color: #6155ae;
+  --footer-gray-color: #eaeaea;
+  --footer-dark-gray-color: #999999;
+  --gray-color: #676767;
+  --lavander-color: #dbd9ee;
+  --light-gray-color: #8e97a6;
+  --light-lavander-color: #c5bfed;
+  --light-main-color: #5c4eae;
+  --light-yellow-color: #f7edd0;
+  --main-color: #6c5fbc;
+  --red-color: #fb471d;
+  --text-gray-color: #636363;
+  --white-color: #fff;
+  --yellow-color: #daa31a;
+}

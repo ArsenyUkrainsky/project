@@ -1,0 +1,38 @@
+.section {
+  align-items: center;
+  background-image: url('/static/images/feature_BG.png');
+  background-size: cover;
+  display: flex;
+  height: 220px;
+  justify-content: center;
+  margin-top: 81px;
+  width: 100%;
+}
+
+.section__feature {
+  align-items: center;
+  border-right: 1px solid #c5c5c5;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  justify-content: center;
+  max-width: 280px;
+  padding: 0 60px;
+  text-align: center;
+  min-height: 120px;
+}
+
+.section__feature:last-of-type {
+  border-right: none;
+}
+
+@media (max-width: 640px) {
+  .section {
+    background-size: contain;
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 41px;
+    padding: 15px 0;
+  }
+}
+
