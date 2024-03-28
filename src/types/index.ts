@@ -74,9 +74,11 @@ export interface PostProps {
   userId: number
   tags: string[]
   reactions: number
+  user: UserInfoProps
 }
 
 export interface UserInfoProps {
+  id?: number
   image: string
   firstName: string
   lastName: string

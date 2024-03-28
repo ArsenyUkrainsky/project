@@ -62,3 +62,8 @@
 .size_large {
   padding: 24px 36px;
 }
+
+.stretch {
+  width: 100%;
+}
+

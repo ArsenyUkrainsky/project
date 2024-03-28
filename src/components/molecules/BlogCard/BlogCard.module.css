@@ -12,17 +12,19 @@
 }
 
 .info {
+  margin: 32px 0 23px;
+}
+
+.user {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin: 32px 0 23px;
 }
 
 .tags {
   align-items: center;
   display: flex;
-  justify-content: space-between;
-  gap: 4px;
+  gap: 8px;
 }
 
 .reactions {

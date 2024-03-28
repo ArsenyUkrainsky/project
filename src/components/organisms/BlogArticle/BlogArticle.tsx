@@ -1,5 +1,7 @@
+import { type FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import type { PostProps, ReviewCardProps, UserInfoProps } from '@/types'
+import { useAddCommentMutation } from '@/store/api/apiSlice'
 import Title from '@/components/atoms/Title'
 import Text from '@/components/atoms/Text'
 import Button from '@/components/atoms/Button'
@@ -16,8 +18,20 @@ interface BlogArticleProps {
 
 export default function BlogArticle({ post, user, comments }: BlogArticleProps) {
   const navigate = useNavigate()
-  const { title, reactions, tags, body } = post
+  const [addComment, { isLoading, error }] = useAddCommentMutation()
+  const { title, reactions, tags, body, id } = post
   const hasComments = comments && comments.length > 0
+  const [commentText, setCommentText] = useState('')
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    try {
+      await addComment({ body: commentText, postId: id, userId: user.id })
+      setCommentText('')
+    } catch (e) {
+      console.log(e)
+    }
+  }
 
   return (
     <article className={styles.block}>
@@ -31,7 +45,7 @@ export default function BlogArticle({ post, user, comments }: BlogArticleProps) 
           </span>
           <ul className={styles.tags}>
             {tags.map((tag) => (
-              <li>
+              <li key={tag}>
                 <Text key={tag}>#{tag} </Text>
               </li>
             ))}
@@ -53,6 +67,23 @@ export default function BlogArticle({ post, user, comments }: BlogArticleProps) 
         </Button>
       </span>
       {hasComments && <CommentsList comments={comments} />}
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <Title level={4}>
+          Add <span className={styles.form__title}>comment</span>
+        </Title>
+        <textarea
+          className={styles.textarea}
+          placeholder='Enter  your comment'
+          value={commentText}
+          onChange={(e) => setCommentText(e.target.value)}
+        />
+        <span className={styles.form__button}>
+          <Button type='submit' stretch disabled={isLoading || !commentText}>
+            send
+          </Button>
+        </span>
+        {error && <Text color='red'>Произошла ошибка при добавлении комментария - {String(error)}</Text>}
+      </form>
     </article>
   )
 }
