@@ -7,6 +7,7 @@ interface IImageProps {
   height?: number
   hiddenArea?: boolean
   lazy?: boolean
+  rounded?: boolean
   src: string
   width?: number
 }
@@ -18,6 +19,7 @@ export default function Image({
   height,
   hiddenArea = false,
   lazy,
+  rounded,
   src,
   width,
 }: IImageProps) {
@@ -26,7 +28,7 @@ export default function Image({
     height: `${height ? `${height}px` : 'auto'}`,
   }
   return (
-    <picture className={styles.picture}>
+    <picture className={`${styles.picture} ${rounded ? styles.picture_rounded : ''}`}>
       <source srcSet={src} type='image/avif' />
       <source srcSet={src} type='image/webp' />
       <source srcSet={src} type='image/png' />

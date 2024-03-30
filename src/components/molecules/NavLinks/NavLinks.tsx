@@ -1,4 +1,4 @@
-import { Link } from '@/components/atoms/Link'
+import Link from '@/components/atoms/Link'
 import styles from './NavLinks.module.css'
 import type { INavLinks } from '@/types'
 import Text from '@/components/atoms/Text'

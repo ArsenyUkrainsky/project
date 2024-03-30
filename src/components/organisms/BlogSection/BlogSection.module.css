@@ -1,0 +1,20 @@
+.block {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 80px auto;
+  max-width: 1205px;
+}
+
+.highlight {
+  color: var(--main-color);
+}
+
+.articles {
+  column-gap: 63px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 95px;
+  row-gap: 42px;
+}
+

@@ -110,3 +110,7 @@
   color: var(--footer-dark-gray-color);
 }
 
+.text_color_main {
+  color: var(--main-color);
+}
+

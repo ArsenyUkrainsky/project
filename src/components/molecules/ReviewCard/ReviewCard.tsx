@@ -1,26 +1,19 @@
+import type { ReviewCardProps } from '@/types'
 import Text from '@/components/atoms/Text'
 import styles from './ReviewCard.module.css'
 import Icon from '@/components/atoms/Icon'
 
-interface ReviewCardProps {
-  name: string
-  review: string
-  anonymous: boolean
-}
-
-export default function ReviewCard({ name, review, anonymous }: ReviewCardProps) {
+export default function ReviewCard({ body, user: { username }, stretched }: ReviewCardProps) {
   return (
-    <li className={styles.card}>
-      {!anonymous && (
-        <span className={styles.title}>
-          <Text weight='medium' family='poppins' size='large'>
-            {name}
-          </Text>
-          <Icon name='review-icon' width={58} height={45} />
-        </span>
-      )}
+    <li className={styles.card} style={{ width: stretched ? '100%' : 'auto' }}>
+      <span className={styles.title}>
+        <Text weight='medium' family='poppins' size='large'>
+          {username}
+        </Text>
+        <Icon name='review-icon' width={58} height={45} />
+      </span>
       <Text style='italic' family='poppins' size='xMedium' color='textGray'>
-        {review}
+        {body}
       </Text>
     </li>
   )

@@ -1,4 +1,4 @@
-import type { icons } from '@/types'
+import type { colors, icons } from '@/types'
 import Icon from '@/components/atoms/Icon'
 import styles from './Button.module.css'
 
@@ -7,8 +7,11 @@ interface IButton {
   color?: 'main' | 'light-lavander' | 'transparent'
   disabled?: boolean
   icon?: icons
+  iconColor?: colors
+  iconRotate?: number
   iconSizeW?: number
   iconSizeH?: number
+  iconPosition?: 'left' | 'right'
   onClick: () => void
   shape?: 'rounded' | 'circle'
   size?: 'sTiny' | 'tiny' | 'small' | 'medium' | 'large'
@@ -21,8 +24,11 @@ export default function Button({
   color = 'main',
   disabled = false,
   icon,
+  iconColor,
+  iconRotate,
   iconSizeW,
   iconSizeH,
+  iconPosition = 'right',
   onClick,
   shape = 'rounded',
   size = 'medium',
@@ -37,8 +43,8 @@ export default function Button({
       ${styles[`color_${color}`]}
       ${styles[`shape_${shape}`]}
       ${styles[`size_${size}`]}`}>
-      {children}
-      {icon && <Icon name={icon} width={iconSizeW} height={iconSizeH} />}
+      {iconPosition === 'left' ? icon && <Icon name={icon} width={iconSizeW} height={iconSizeH} rotate={iconRotate} color={iconColor} /> : children}
+      {iconPosition === 'right' ? icon && <Icon name={icon} width={iconSizeW} height={iconSizeH} rotate={iconRotate} color={iconColor} /> : children}
     </button>
   )
 }

@@ -1,0 +1,37 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  margin: 125px auto 150px;
+  max-width: 1250px;
+  width: 100%;
+}
+
+.user {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 32px 0 60px;
+  width: 100%;
+}
+
+.reactions {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.reactions__item {
+  align-items: center;
+  display: flex;
+}
+
+.tags {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+}
+
+.button {
+  margin: 95px 0;
+}
+

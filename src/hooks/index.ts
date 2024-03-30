@@ -1,4 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, type RefObject } from 'react'
+
+type ScrollIntoViewOptions = {
+  behavior: ScrollBehavior
+  block: ScrollLogicalPosition
+  inline: ScrollLogicalPosition
+}
 
 function useDeviceType() {
   const [deviceType, setDeviceType] = useState({
@@ -28,5 +34,17 @@ function useDeviceType() {
 
   return deviceType
 }
+function useSmoothScroll() {
+  const executeScroll = (
+    ref: RefObject<HTMLElement>,
+    options: ScrollIntoViewOptions = { behavior: 'smooth', block: 'start', inline: 'nearest' }
+  ) => {
+    if (ref.current) {
+      ref.current.scrollIntoView(options)
+    }
+  }
 
-export { useDeviceType }
+  return executeScroll
+}
+
+export { useDeviceType, useSmoothScroll }

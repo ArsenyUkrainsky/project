@@ -1,7 +1,7 @@
 export const navLinks = [
-  { title: 'Recipes', href: '/' },
-  { title: 'FAQ', href: '#' },
-  { title: 'Blog', href: '#' },
+  { title: 'Recipes', href: '/#recipes' },
+  { title: 'FAQ', href: '/#faq' },
+  { title: 'Blog', href: '/blog' },
 ]
 
 export const featuresText = [
@@ -16,8 +16,8 @@ export const downloadText = [
 ]
 
 export const socialLinks = [
-  { title: 'Instagram', href: '#', icon: 'inst' },
-  { title: 'Linkedin', href: '#', icon: 'in' },
-  { title: 'Facebook', href: '#', icon: 'facebook' },
-  { title: 'Twitter', href: '#', icon: 'twit' },
+  { title: 'Instagram', href: '', icon: 'inst' },
+  { title: 'Linkedin', href: '', icon: 'in' },
+  { title: 'Facebook', href: '', icon: 'facebook' },
+  { title: 'Twitter', href: '', icon: 'twit' },
 ]
