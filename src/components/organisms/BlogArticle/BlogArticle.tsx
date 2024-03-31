@@ -1,11 +1,14 @@
 import { type FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import type { PostProps, ReviewCardProps, UserInfoProps } from '@/types'
+import type { SerializedError } from '@reduxjs/toolkit'
+import type { FetchBaseQueryError } from '@reduxjs/toolkit/query'
 import { useAddCommentMutation } from '@/store/api/apiSlice'
 import Title from '@/components/atoms/Title'
 import Text from '@/components/atoms/Text'
 import Button from '@/components/atoms/Button'
 import Icon from '@/components/atoms/Icon'
+import Notification from '@/components/atoms/Notification'
 import UserInfo from '@/components/molecules/UserInfo'
 import CommentsList from '@/components/molecules/CommentsList'
 import styles from './BlogArticle.module.css'
@@ -14,9 +17,12 @@ interface BlogArticleProps {
   post: PostProps
   user: UserInfoProps
   comments?: ReviewCardProps[]
+  postError?: string | FetchBaseQueryError | SerializedError
+  commentsError?: string | FetchBaseQueryError | SerializedError
+  userError?: string | FetchBaseQueryError | SerializedError
 }
 
-export default function BlogArticle({ post, user, comments }: BlogArticleProps) {
+export default function BlogArticle({ post, user, comments, postError, commentsError, userError }: BlogArticleProps) {
   const navigate = useNavigate()
   const [addComment, { isLoading, error }] = useAddCommentMutation()
   const { title, reactions, tags, body, id } = post
@@ -33,11 +39,18 @@ export default function BlogArticle({ post, user, comments }: BlogArticleProps) 
     }
   }
 
+  
+    if (postError) {
+    const message = error || postError || commentsError || ''
+    return <Notification message={message} type='error' />
+  }
+ 
+
   return (
     <article className={styles.block}>
       <Title level={3}>{title}</Title>
       <div className={styles.user}>
-        <UserInfo {...user} />
+        {userError ? <Notification message={userError} type='error' /> : <UserInfo {...user} />}
         <div className={styles.reactions}>
           <span className={styles.reactions__item}>
             <Text>{reactions}</Text>
@@ -66,7 +79,8 @@ export default function BlogArticle({ post, user, comments }: BlogArticleProps) 
           All Articles
         </Button>
       </span>
-      {hasComments && <CommentsList comments={comments} />}
+      {hasComments && !commentsError && <CommentsList comments={comments} />}
+      {commentsError && <Notification message={commentsError} type='error' />}
       <form className={styles.form} onSubmit={handleSubmit}>
         <Title level={4}>
           Add <span className={styles.form__title}>comment</span>

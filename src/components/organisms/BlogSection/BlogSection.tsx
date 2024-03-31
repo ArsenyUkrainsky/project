@@ -14,12 +14,12 @@ export default function BlogSection() {
   const [searchParams] = useSearchParams()
   const page = searchParams.get('page') ?? 1
   const skip = (Number(page) - 1) * SHOW_LIMIT
-  const { data, isLoading, error } = useGetPostsQuery({ limit: SHOW_LIMIT, skip })
+  const { data, isLoading, error, isFetching } = useGetPostsQuery({ limit: SHOW_LIMIT, skip })
   const { posts, total } = data ?? { posts: [], total: 0 }
 
   if (error) return <Notification message={error} type='error' />
 
-  return isLoading ? (
+  return isLoading || isFetching ? (
     <SkeletonList />
   ) : (
     <article className={styles.block}>

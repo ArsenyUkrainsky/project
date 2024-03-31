@@ -9,15 +9,13 @@ interface NotificationProps {
 }
 
 const Notification: React.FC<NotificationProps> = ({ message, type }) => {
-  let errorMessage = ''
+  let errorMessage = 'Произошла ошибка '
   if (type === 'error' && typeof message === 'object' && 'status' in message) {
-    errorMessage = message.status.toString()
+    errorMessage += message.status
   } else if (type === 'error' && typeof message === 'object' && 'message' in message) {
-    errorMessage = message.message as string
+    errorMessage += message.message as string
   } else if (typeof message === 'string') {
-    errorMessage = message as string
-  } else {
-    errorMessage = 'Произошла ошибка'
+    errorMessage += message as string
   }
 
   return (
