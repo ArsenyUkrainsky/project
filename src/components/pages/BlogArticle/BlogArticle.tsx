@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 import { useGetCommentsByPostIdQuery, useGetPostByIdQuery, useLazyGetUserByIdQuery } from '@/store/api/apiSlice'
 import BlogArticleComponent from '@/components/organisms/BlogArticle'
 import Spinner from '@/components/atoms/Spinner'
-import Notification from '@/components/atoms/Notification'
 
 export default function BlogArticle() {
   const { id } = useParams()
@@ -20,14 +19,16 @@ export default function BlogArticle() {
     }
   }, [post, trigger])
 
-  if (error || postError || commentsError) {
-    const message = error || postError || commentsError || ''
-    return <Notification message={message} type='error' />
-  }
-
   return postIsLoading || commentsIsLoading || isLoading ? (
     <Spinner size='large' />
   ) : (
-    <BlogArticleComponent post={post} user={data} comments={comments} />
+    <BlogArticleComponent 
+      post={post} 
+      user={data} 
+      comments={comments}
+      postError={postError}
+      commentsError={commentsError}
+      userError={error}
+    />
   )
 }

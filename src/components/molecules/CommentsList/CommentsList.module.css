@@ -9,6 +9,6 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 116px;
+  gap: 45px;
   margin-top: 80px;
 }

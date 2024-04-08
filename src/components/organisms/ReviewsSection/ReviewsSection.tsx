@@ -16,6 +16,7 @@ const settings = {
   slidesToShow: 2.5,
   speed: 500,
   swipeToSlide: true,
+  adaptiveHeight: true,
   responsive: [
     {
       breakpoint: 1199,
